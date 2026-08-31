@@ -3,6 +3,7 @@ message: "This pre-release artifact is not yet publicly licensed; contact the au
 title: "Replay-Gated Neural Execution: Decoupling Persistent Behavioral Specifications from Neural Realizations in Frozen Language Models"
 type: software
 version: 0.1.0-rc3
+repository-code: "https://github.com/Messydrawing/replay-gated-neural-execution"
 authors:
   - family-names: Zeng
     given-names: Xianliang

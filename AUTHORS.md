@@ -4,6 +4,6 @@
 - Zhanzhan Zhao
 
 Affiliation, author order, ORCID identifiers, corresponding-author designation,
-repository URL, arXiv identifier, and any future open-source license remain to
+arXiv identifier, and any future open-source license remain to
 be confirmed by the authors. The project owner has authorized public source
 visibility; the current All Rights Reserved license continues to govern reuse.
