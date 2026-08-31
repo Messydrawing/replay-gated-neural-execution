@@ -1,0 +1,20 @@
+{
+  "schema": "REPLAY_GATED_ARCHIVED_EXECUTION_SOURCE_IDENTITY_V1",
+  "experiment_identity": "Certified Adaptive Dynamics Cascade v1.2-R2 / Frozen Fresh v1-R2",
+  "files_not_rewritten_by_public_release": {
+    "CASCADE_PROTOCOL.json": "e91e9ddca048fed5a62f77b016144e74a9386234563aea0a8bae4d2a76a5b738",
+    "cascade_core.py": "ad9dc09fa3df4b5653ef47de4d6731f1b7f11e72471f5ae0e824cd2aa809118e",
+    "cascade_adjudication.py": "68c022f07b4f364efad6bb07ae764306c15772e22fff1d40e99f637adc971b35",
+    "cascade_runtime_adapter_3090.py": "9d52a4392266602f460370f978c7c10de16ab2752f074a5e7371baeb58dccd4e",
+    "run_cascade_context.py": "8cdbe63efc1687765525c094ec4f74a2d1c102991c2e4e0f4083dc88b15ba421",
+    "run_full_baseline_context.py": "c534ae67a240ca7918f7b5c4e2593c00f0d9aa6f45b2b8e9e48d2ecd6a8616ba",
+    "adjudicate_cascade.py": "4d26076b9a64c7700c438dca65a16cad5d143cfd79a0fb96741e2802c20a8328",
+    "audit_cascade_closeout.py": "489c00f1f3141f6e507608ec02562a26129d7e7d5a95be81999d2b92da5c3f54"
+  },
+  "formal_runner_imports_cascade_core": false,
+  "formal_runner_uses_row_certificate_pass": true,
+  "row_certificate_pass_requires_exact_zero": true,
+  "final_selected_action_dual_precision_replay_present": true,
+  "archived_sources_included_in_full_here": false,
+  "reason_full_sources_omitted": "complete internal execution stack and payload-bound runners are outside this release boundary"
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "REPLAY_GATED_PHYSICAL_CONTRACT_V1",
+  "backbone": "Qwen/Qwen3-0.6B",
+  "action_dimension": 9216,
+  "hidden_width": 1024,
+  "layers": [7, 14, 21],
+  "write_sites_per_layer": 3,
+  "bridge_budget": 0.006,
+  "answer_budget": 0.015,
+  "population_energy_p99_max": 0.018,
+  "hard_total_budget": 0.021,
+  "maximum_write_norm": 0.05
+}

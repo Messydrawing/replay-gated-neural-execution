@@ -1,0 +1,28 @@
+{
+  "schema": "REPLAY_GATED_CASCADE_PUBLIC_V1",
+  "tiers": [
+    {"name": "TIER1_REDUCED_PULLBACK", "maximum_optimizer_updates": 32, "effect_probe_dimension": 8},
+    {"name": "TIER2_AUGMENTED_RELINEARIZATION", "maximum_optimizer_updates": 48},
+    {"name": "TIER3_FULL_WITNESS_SEARCH", "normal_steps": 97, "continuation_steps": 388, "relinearized_fallback": true}
+  ],
+  "tier_restart_rule": "fresh initializer and optimizer; no candidate/KV/hidden/RNG state transfer",
+  "qualification": {
+    "both_precisions_required": true,
+    "robust_margin_minimum": 0.2,
+    "energy_p99_max": 0.018,
+    "energy_hard_max": 0.021,
+    "candidate_permutation_error_max": 1e-6,
+    "unsafe_commit_count": 0,
+    "hard_violation_count": 0,
+    "information_path_violation_count": 0,
+    "nonfinite_count": 0
+  },
+  "cost": {
+    "primary_unit": "paired-replay-equivalent on target GPU",
+    "primary_active_utility_counts": [1, 4],
+    "secondary_active_utility_counts": [2, 8, 64],
+    "failed_tier_cost_is_charged": true,
+    "bootstrap_seed": 924117,
+    "bootstrap_resamples": 10000
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "schema": "REPLAY_GATED_PUBLIC_COHORT_SUMMARY_V1",
+  "reference_stability": {"contexts": 12, "known_semantic_cells": 767, "explicit_abstentions": 1},
+  "cascade_pilot": {"contexts": 4, "utilities_per_context": 64, "cells": 256, "one_shot": true},
+  "frozen_fresh": {"contexts": 4, "utilities_per_context": 64, "cells": 256, "group_disjoint_from_pilot": true, "one_shot": true},
+  "payloads_in_git": false
+}

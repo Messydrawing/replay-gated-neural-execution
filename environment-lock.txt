@@ -1,0 +1,25 @@
+Original target environment (evidence lock; not a portable resolver)
+===================================================================
+Platform: Linux-6.8.0-40-generic-x86_64-with-glibc2.35
+GPU: NVIDIA GeForce RTX 3090 (compute capability 8.6)
+NVIDIA driver: 550.107.02
+Python: 3.12.7 (Anaconda build, GCC 11.2.0)
+PyTorch: 2.12.1+cu126
+Transformers: 4.57.6
+CUDA reported by PyTorch: 12.6
+cuDNN: 91002
+NumPy: 2.5.1
+SciPy: 1.18.0
+cudnn_benchmark: false
+cudnn_deterministic: false
+deterministic_algorithms: false
+Backbone: Qwen/Qwen3-0.6B
+Snapshot: c1899de289a04d12100db370d81485cdf75e47ca
+
+Source evidence:
+- TARGET_3090_ENVIRONMENT_LOCK_V11_R3.json
+- TARGET_3090_ENVIRONMENT_LOCK_V1_1_R2.json
+- IDTS_PARENT_IDENTITY.json
+
+This file records the actual frozen environment. It does not claim that the
+omitted target runners or data payloads are reproducible from this slice.

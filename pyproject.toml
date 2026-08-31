@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "replay-gated-neural-execution"
+version = "0.1.0rc3"
+description = "Reference implementation and aggregate frozen evidence for replay-gated neural execution"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+authors = [
+  {name = "Xianliang Zeng", email = "xianliangzeng@link.cuhk.edu.cn"},
+  {name = "Zhanzhan Zhao"},
+]
+dependencies = [
+  "numpy>=1.26,<3",
+  "scipy>=1.11,<2",
+  "torch>=2.4",
+  "transformers>=4.51",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+figures = ["matplotlib>=3.8"]
+
+[tool.setuptools.packages.find]
+where = ["reference"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["reference"]

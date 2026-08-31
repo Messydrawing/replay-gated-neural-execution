@@ -1,0 +1,35 @@
+{
+  "schema": "REPLAY_GATED_SOURCE_PROVENANCE_V3",
+  "archived_experiment_identity": "Certified Adaptive Dynamics Cascade v1.2-R2 / Frozen Fresh v1-R2",
+  "modules": {
+    "adjudication.py": {"frozen_sha256": "7643b0e55c5b790520bfc1bd02b234d7f52c22fa5b45532f450bd2ed95a6b545", "public_copy_exact": true, "label": "FROZEN-SOURCE EXACT COPY"},
+    "physical_abi.py": {"frozen_sha256": "5d0b9d40d6603bd8ca7dcf51a464debe6c0ac8ce6dec052d5ace7b164aef7b50", "public_copy_exact": true, "label": "FROZEN-SOURCE EXACT COPY"},
+    "canonical.py": {"frozen_sha256": "22b683ae48461593dc4449a3dfee39832fe83df8acbdf70a6a3f9d0c1a3e9174", "public_copy_exact": true, "label": "FROZEN-SOURCE EXACT COPY"},
+    "semantic.py": {"frozen_sha256": "f1925ae3ff61119286fc8780716e47fea891e348a84f54a6ace47fc391e8c629", "public_copy_exact": true, "label": "FROZEN-SOURCE EXACT COPY"},
+    "utility_codec.py": {"frozen_sha256": "c061881de1296ebb314da21cc2bc9fa824742363bd3612347abcf595c30c79ab", "public_copy_exact": true, "label": "FROZEN-SOURCE EXACT COPY"},
+    "registry_adapter.py": {"frozen_sha256": "d7dbaa07ab3f0f8e209364945d3e4fecfd49631b9a48ef8aa1a632135a61bf69", "public_copy_exact": true, "label": "FROZEN-SOURCE EXACT COPY"},
+    "qwen_z64.py": {"frozen_sha256": "7a42e77a0d39532432f4425a4d86a81bef533ab8a12317eb873a007c29179e24", "public_copy_exact": true, "label": "FROZEN-SOURCE EXACT COPY"},
+    "tier_runtime.py": {"frozen_sha256": "9d7d092a1b2b7ef85a12a9786a2d85566cbf9dfd223b1a48cee2a4c0f721d373", "public_copy_exact": false, "label": "REFERENCE ADAPTATION", "public_change": "standalone package surface and local imports"}
+  },
+  "reference_reimplementations": [
+    "authorization.py",
+    "cascade.py",
+    "certificate.py",
+    "replay.py",
+    "witness_search.py"
+  ],
+  "reference_reimplementation_label": "NOT USED TO GENERATE ARCHIVED RESULTS",
+  "excluded_historical_modules": [
+    "causal_reachability.py",
+    "scoring.py"
+  ],
+  "exclusion_reason": "historical project modules outside the Paper 1 frozen runtime contract",
+  "omitted_from_public_release": [
+    "complete target-server execution stack",
+    "model weights",
+    "raw action witnesses",
+    "raw contexts and prompts",
+    "sealed populations",
+    "future-stage code"
+  ]
+}

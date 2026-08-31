@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "This pre-release artifact is not yet publicly licensed; contact the authors before reuse."
+title: "Replay-Gated Neural Execution: Decoupling Persistent Behavioral Specifications from Neural Realizations in Frozen Language Models"
+type: software
+version: 0.1.0-rc3
+authors:
+  - family-names: Zeng
+    given-names: Xianliang
+    email: xianliangzeng@link.cuhk.edu.cn
+  - family-names: Zhao
+    given-names: Zhanzhan
