@@ -126,5 +126,7 @@ end-to-end cost than bare generation.
 
 ## Release status
 
-Public release remains blocked pending author and institutional IP/licensing
-approval. The current `LICENSE` grants no open-source rights.
+This repository is publicly available as a source-visible research artifact.
+The current `LICENSE` remains All Rights Reserved and grants no open-source,
+redistribution, or reuse rights; contact the authors for permission unless a
+separate license is adopted later.
