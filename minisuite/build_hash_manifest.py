@@ -22,7 +22,11 @@ def main() -> None:
     files["run_public_minisuite.py"] = sha(ROOT / "run_public_minisuite.py")
     files["verify_output.py"] = sha(ROOT / "verify_output.py")
     value = {"schema": "REPLAY_GATED_NEURAL_EXECUTION_PUBLIC_MINISUITE_HASHES_V1", "files": files}
-    (ROOT / "SHA256SUMS.json").write_text(json.dumps(value, sort_keys=True, indent=2) + "\n", encoding="utf-8")
+    (ROOT / "SHA256SUMS.json").write_text(
+        json.dumps(value, sort_keys=True, indent=2) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
     print(json.dumps({"files": len(files), "manifest_sha256": sha(ROOT / "SHA256SUMS.json")}, indent=2))
 
 

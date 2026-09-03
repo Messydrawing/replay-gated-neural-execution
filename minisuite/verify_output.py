@@ -39,7 +39,11 @@ def main() -> None:
              "result_file_sha256": sha(path), "result_semantic_sha256": observed_semantic,
              "scientific_payload_sha256": value["scientific_payload_sha256"],
              "source_manifest_sha256": value["source_manifest_sha256"]}
-    (a.output / "audit.json").write_text(json.dumps(audit, sort_keys=True, indent=2) + "\n", encoding="utf-8")
+    (a.output / "audit.json").write_text(
+        json.dumps(audit, sort_keys=True, indent=2) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
     print(json.dumps(audit, indent=2))
     if failures: raise SystemExit(1)
 

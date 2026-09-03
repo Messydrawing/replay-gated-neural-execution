@@ -81,7 +81,7 @@ def main() -> None:
         try:
             warm, analytic_pass, zero32, zerobf, _basis, _diagnostics = analytic_search(machine, targets)
             missing = [target for target in targets if target not in analytic_pass]
-            with trace_path.open("w", encoding="utf-8") as trace:
+            with trace_path.open("w", encoding="utf-8", newline="\n") as trace:
                 optimized = fallback_search(machine, missing, warm, zero32, zerobf, trace) if missing else {}
             zero = np.zeros(ACTION_DIMENSION, dtype=np.float64)
             independent_zero32 = machine.runtime.replay("fp32", zero, "independent")
