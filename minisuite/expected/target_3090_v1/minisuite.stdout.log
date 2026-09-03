@@ -1,0 +1,15 @@
+{
+  "status": "MINISUITE_COMPLETE",
+  "summary": {
+    "native_certified": 8,
+    "native_total": 8,
+    "diagonal_transfer_certified": 8,
+    "diagonal_transfer_total": 8,
+    "offdiagonal_transfer_certified": 4,
+    "offdiagonal_transfer_total": 8,
+    "unsafe_commit_count": 0,
+    "energy_max": 0.017749000472123633,
+    "candidate_permutation_error_max": 0.0
+  },
+  "semantic_sha256": "cfd3e99b2f2f2566157f40f03ce47768d5302296a940aff8594df824a6a12cbf"
+}

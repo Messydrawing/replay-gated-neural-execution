@@ -12,4 +12,6 @@ dist/
 *.npy
 *.npz
 *.log
+!minisuite/expected/**/*.npz
+!minisuite/expected/**/*.log
 .env
