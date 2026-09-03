@@ -1,0 +1,28 @@
+{
+  "schema": "REPLAY_GATED_NEURAL_EXECUTION_PUBLIC_MINISUITE_PROTOCOL_V1",
+  "model": {
+    "repo_id": "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "revision": "a10cc1512eabd3dde888204e902eca88bddb4951"
+  },
+  "contexts": 2,
+  "utility_ordinals": [0, 21, 42, 60],
+  "physical_action_dimension": 8640,
+  "certificate": {
+    "precisions": ["fp32", "bf16"],
+    "top1": true,
+    "effect_peak": true,
+    "robust_margin_minimum": 0.2,
+    "population_energy_p99_maximum": 0.018,
+    "hard_energy_maximum": 0.021,
+    "candidate_permutation_error_maximum": 1e-6
+  },
+  "finder": {
+    "analytic_context_chart": true,
+    "fallback_optimizer": "Adam",
+    "fallback_learning_rate": 0.004,
+    "fallback_maximum_updates": 97
+  },
+  "cross_state_transfer": "every found action is replayed in both public contexts",
+  "model_training": false,
+  "scientific_status": "PUBLIC_EXECUTABLE_MINIATURE_NOT_A_REPLACEMENT_FOR_FROZEN_FORMAL_EVIDENCE"
+}

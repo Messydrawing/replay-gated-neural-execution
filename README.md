@@ -2,10 +2,10 @@
 
 ## Decoupling Persistent Behavioral Specifications from Neural Realizations in Frozen Language Models
 
-This pre-release repository is a **reference implementation and aggregate
-frozen-evidence slice** for Paper 1. It is not a mirror of the full
-Cutting-LLM/NCO workspace and is not yet a full actual-model reproduction
-package.
+This pre-release repository is a **reference implementation, aggregate
+frozen-evidence slice, and executable open-backbone minisuite** for Paper 1.
+It is not a mirror of the full Cutting-LLM/NCO workspace and does not reproduce
+the historical Qwen formal runs byte-for-byte.
 
 The runtime receives a typed Z64 behavioral predicate `U` and a neural context.
 It proposes a context-specific 9,216-dimensional physical action, evaluates
@@ -26,8 +26,10 @@ After selection, the exact same action is replayed again from the original
 context, recertified, identity-checked, and only then committed. Any failure
 causes abstention or fail-closed rejection before commit.
 
-No model weights, private prompts, raw context payloads, witness tensors, SSH
-details, or future UnseenUtility experiments are included.
+No model weights, private prompts, formal-cohort payloads, SSH details, or
+future UnseenUtility experiments are included. The `minisuite/` contains two
+explicitly retired public prompts and downloads a pinned open SmolLM2 snapshot;
+its small action output is included as a reproducibility fixture.
 
 ## Frozen system identity
 
@@ -81,14 +83,27 @@ python scripts/summarize_results.py
 python scripts/make_figures.py
 ```
 
+Optional real-model miniature (NVIDIA GPU with BF16 support):
+
+```bash
+python minisuite/run_public_minisuite.py --output minisuite/output
+python minisuite/verify_output.py minisuite/output
+```
+
+The target RTX 3090 reference run certifies 8/8 native cells and 8/8 diagonal
+replays, records zero authorization bypasses and zero candidate-permutation
+error, and certifies 4/8 off-diagonal transfers. The last quantity is
+descriptive evidence of partial cross-state portability, not a pass threshold.
+
 Unit tests use deterministic fake backends and do not download a model. The
 figure script writes to ignored `build/figures/`; it never overwrites the
 archived frozen figure.
 
-Without the omitted raw contexts, action witnesses, and target-GPU runners, a
-reader can verify file/semantic integrity, test the public abstractions, and
-recompute summaries and figures from aggregate closeouts. A reader cannot
-rerun the reported Qwen experiments from this repository alone. See
+Without the omitted formal contexts, formal action witnesses, and historical
+target-GPU runners, a reader can verify file/semantic integrity, test the public
+abstractions, recompute summaries and figures from aggregate closeouts, and run
+the public SmolLM2 miniature. A reader cannot rerun the reported Qwen formal
+experiments from this repository alone. See
 [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md).
 
 ## Evidence/source separation
@@ -115,14 +130,17 @@ See [`frozen/SOURCE_PROVENANCE.md`](frozen/SOURCE_PROVENANCE.md) and
 - `reference/replay_gated_execution/physical_abi.py`: byte-identical physical-contract source copy.
 - `frozen/aggregate_results/`: immutable aggregate scientific closeouts.
 - `frozen/manifests/`: source identities and public-copy provenance.
+- `minisuite/`: one-command, real-model 2-context x 4-Utility finder,
+  FP32/BF16 replay certificate, physical audit, and cross-state replay.
 
 ## Claim boundary
 
-The frozen evidence supports context-indexed, replay-certified neural
-realization and lower operational search cost on the registered public
-benchmarks. It does not establish unseen-Utility late binding, natural-language
-capability synthesis, cross-backbone generality, general safety, or lower
-end-to-end cost than bare generation.
+The frozen Qwen evidence and the public SmolLM2 miniature support
+context-indexed, replay-certified neural realization on two concrete frozen
+backbones; the SmolLM2 H2 supplement additionally tests fixed-state witness
+non-uniqueness. They do not establish model-class-wide cross-backbone
+generality, unseen-Utility late binding, natural-language capability synthesis,
+general safety, or lower end-to-end cost than bare generation.
 
 ## Release status
 

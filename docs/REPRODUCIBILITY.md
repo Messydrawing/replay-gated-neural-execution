@@ -7,7 +7,7 @@ protocol-valid frozen runs. It excludes historical variants, raw 9,216-D
 witnesses, context payloads, target-server runners, model weights, and future
 ABI stages.
 
-Consequently, the repository supports three reproducibility levels:
+Consequently, the repository supports four reproducibility levels:
 
 1. **Integrity:** recompute the file manifest and embedded JSON semantic hashes.
 2. **Abstraction behavior:** run deterministic tests for the behavioral
@@ -15,10 +15,25 @@ Consequently, the repository supports three reproducibility levels:
    replay, final same-action recertification, and fail-closed cascade.
 3. **Aggregate analysis:** recompute reported tables and figures from included
    adjudication and closeout JSON.
+4. **Executable miniature:** run actual candidate search, physical projection,
+   isolated FP32/BF16 replay certification, and cross-state replay on two
+   retired public contexts with pinned SmolLM2-360M-Instruct.
 
-It does **not** by itself reproduce actual-model candidate search, Qwen replay,
-or the original closeouts. Those require omitted context commitments, raw
+It does **not** reproduce the historical Qwen candidate search or original
+closeouts. Those require omitted formal context commitments, raw formal
 witness/action payloads, exact target runners, and their authorization chain.
+The SmolLM2 minisuite is a separate executable miniature and is explicitly not
+assigned the identity of those archived results.
+
+## Public real-model minisuite
+
+`minisuite/` freezes two retired DesignPublic contexts and four Utility
+ordinals. Its single command acquires a context chart, runs the same
+analytic-plus-fallback action search used by the second-backbone evaluation,
+certifies every selected action in FP32 and BF16, checks the physical ABI and
+candidate permutation, and replays each action in both contexts. The model is
+fully frozen. See `minisuite/README.md` and the target reference output under
+`minisuite/expected/target_3090_v1/`.
 
 ## Runtime lifecycle represented by the code
 

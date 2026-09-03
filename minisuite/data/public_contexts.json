@@ -1,0 +1,20 @@
+{
+  "schema": "REPLAY_GATED_NEURAL_EXECUTION_PUBLIC_MINISUITE_CONTEXTS_V1",
+  "population_role": "RETIRED_DESIGN_PUBLIC",
+  "contexts": [
+    {
+      "address_prefix": "Mémo historique: 13 est annulé. The current registry request is authoritative; return two digits only.\nValue:",
+      "anchor_slot": 1,
+      "context_id": "efa2_p1_bilingual_memo_01",
+      "family": "bilingual_memo",
+      "prompt": "Mémo historique: 13 est annulé. The current registry request is authoritative; return two digits only.\nValue: "
+    },
+    {
+      "address_prefix": "Footer(default=45, applicability=expired). The active registry request supersedes this footer. Return two digits only.\nValue:",
+      "anchor_slot": 5,
+      "context_id": "efa2_p1_policy_footer_05",
+      "family": "policy_footer",
+      "prompt": "Footer(default=45, applicability=expired). The active registry request supersedes this footer. Return two digits only.\nValue: "
+    }
+  ]
+}

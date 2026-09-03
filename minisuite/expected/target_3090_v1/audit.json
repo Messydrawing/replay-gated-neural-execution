@@ -1,0 +1,9 @@
+{
+  "failures": [],
+  "result_file_sha256": "5c909b831375ae343516c135c70f098c2703d23fa6abf483f80f7eeaf4b4b2a6",
+  "result_semantic_sha256": "cfd3e99b2f2f2566157f40f03ce47768d5302296a940aff8594df824a6a12cbf",
+  "schema": "REPLAY_GATED_NEURAL_EXECUTION_PUBLIC_MINISUITE_AUDIT_V1",
+  "scientific_payload_sha256": "3c04ab77bfa1af89969f1b01702f9adbac1e4cdff859d29c69e03fbd61f29e42",
+  "source_manifest_sha256": "2c603efe945ad3173d6ae0734f3afe53f1782c3b2f7c27c26e7e226236185c75",
+  "status": "PASS"
+}

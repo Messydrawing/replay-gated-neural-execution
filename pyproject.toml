@@ -18,6 +18,7 @@ dependencies = [
   "scipy>=1.11,<2",
   "torch>=2.4",
   "transformers>=4.51",
+  "huggingface-hub>=0.30",
 ]
 
 [project.optional-dependencies]
